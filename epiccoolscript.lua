@@ -4,6 +4,7 @@ local EntryPointHaxx = Library.CreateLib("entry point lol", "Sentinel")
 local Teleports = EntryPointHaxx:NewTab("Teleports")
 local BuyRemotes = EntryPointHaxx:NewTab("Buy Remotes")
 local LocalPlayerDoomer = EntryPointHaxx:NewTab("LocalPlayer")
+local YourMoM = LocalPlayerDoomer:NewSection("LocalPlayer")
 local Credits = EntryPointHaxx:NewTab("Credits")
 local Credits2 = Credits:NewSection("drop awp men!!!!")
 local ShadowWars = EntryPointHaxx:NewTab("Shadow Wars")
@@ -79,11 +80,26 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.3640
 end)
 ScientistTeleports:NewButton("Control Room", "falcon is about to die", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-44.4551125, 17.1000004, 13.3779631)
-end)
+end) 
 Credits2:NewButton("domain's discord link", "sexy stuff", function()
     setclipboard("https://discord.gg/MmygYr8nmT")
 end)
-
+YourMoM:NewToggle("Undetectable", "", function(undetectable)
+    if undetectable then
+game:GetService("Workspace").Level.Players.Player.Flags.Trespassing.Name = "test2"
+game:GetService("Workspace").Level.Players.Player.Flags.Armed.Name = "test"
+    else
+print("no")
+    end
+end)
+YourMoM:NewToggle("Undetectable Fix", "toggle before bagging, warning this will remove your undetectable", function(undetectablefix)
+    if undetectablefix then
+game:GetService("Workspace").Level.Players.Player.Flags.test2.Name = "Trespassing"
+game:GetService("Workspace").Level.Players.Player.Flags.test.Name = "Armed"
+    else
+print("no")
+    end
+end)
 
 ShadowWarsVisual:NewButton("ESP", "simple esp, what do you want?", function()
 loadstring(game:HttpGetAsync("not done yet"))()
