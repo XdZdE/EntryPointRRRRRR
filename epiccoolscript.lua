@@ -13,12 +13,6 @@ local SCRSTeleports = Teleports:NewSection("The SCRS")
 local BlackSiteTeleports = Teleports:NewSection("The Blacksite")
 local ScientistTeleports = Teleports:NewSection("The Scientist")
 local GamepassGuns = BuyRemotes:NewSection("Gamepass Guns")
-local ShadowWarsVisual = ShadowWars:NewSection("Visual")
-if game.PlaceId == 2991849143 then
-print("done")
-else
-game:GetService("CoreGui")["entry point lol"].Main.MainSide.tabFrames["Shadow WarsTabButton"]:Remove()
-end
 DepositTeleports:NewButton("Camera Guard 1", "basement camera guard lol", function()
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame =
             CFrame.new(156.421799, 173.5, -69.0994873)
@@ -99,8 +93,4 @@ game:GetService("Workspace").Level.Players.Player.Flags.test.Name = "Armed"
     else
 print("no")
     end
-end)
-
-ShadowWarsVisual:NewButton("ESP", "simple esp, what do you want?", function()
-loadstring(game:HttpGetAsync("not done yet"))()
 end)
